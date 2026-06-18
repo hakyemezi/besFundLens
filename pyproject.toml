@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "besfundlens"
+version = "0.1.0"
+description = "Bilingual analytics engine for Turkish pension funds"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "İlyas Hakyemez"}]
+license = {text = "MIT"}
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "requests>=2.31",
+    "holidays>=0.50",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["besfundlens*"]
